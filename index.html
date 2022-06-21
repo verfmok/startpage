@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Home</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="main.css">
+<body>
+    <div class="bg-image"></div>
+    <div class="window-bg">
+        <div class="front-img"></div>
+        <div class="titlediv">
+            <div id=titleb>Home</div>
+            <div id="clock"></div>
+        </div>
+        <div class="windowbackgroundarea1"><div id="Subtitle">...</div></div>
+        <div class="windowbackgroundarea2">
+        <div class="centerDivs">
+            <div class="category">
+                <div class="categorytitle">Entertainment</div>
+                <div class="categorycontent"><a href="https://youtube.com/">Youtube</a> - <a href="https://www.netflix.com/browse">Netflix</a> - <a href="https://1337x.to/">1337x</a> </div>
+                <div class="categorytitle">Socials</div>
+                <div class="categorycontent"><a href="https://www.tumblr.com/dashboard">Tumblr</a> - <a href="https://www.reddit.com">Reddit</a> - <a href="https://www.instagram.com/">Instagram</a></div>
+                <div class="categorytitle">Misc</div>
+                <div class="categorycontent"><a href="https://www.flightrising.com/">FR</a> - <a href="https://www.humblebundle.com/">Humble</a> - <a href="https://www.marktplaats.nl/">Marktplaats</a> - <a href="https://drop.com/home">Drop</a></div>
+               
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="pixeloverlay"></div>
+    <div class="vignette"></div>
+    <script>
+        var clock=document.getElementById("clock");
+        function updateClock(){
+            var date=new Date();
+            date.setHours(date.getHours()+0)
+            var hours = date.getHours().toString();
+            var minutes = date.getMinutes().toString();
+            var seconds = date.getSeconds().toString();
+            if (hours.length==1){
+                hours="0"+hours
+            }
+            if (minutes.length==1){
+                minutes="0"+minutes
+            }
+            if (seconds.length==1){
+                seconds="0"+seconds
+            }
+            clock.innerHTML=hours+":"+minutes+":"+seconds;
+        }
+        updateClock();
+        setInterval(updateClock,1000);
+    </script>
+    </body>
+    </html>
